@@ -11,4 +11,7 @@ urlpatterns = [
 
 	# About Page
 	path('about/', views.about, name='about'),
+
+	# Show all story names
+	path('names/', views.names, name='names'),
 ]

@@ -1,0 +1,15 @@
+{% extends "campfires/base.html" %}
+
+{% block content %}
+
+	<p>Stories</p>
+
+	<ul style="list-style-type: none">
+		{% for name in names %}
+			<li>{{ name }}</li>
+		{% empty %}
+			<li>No names have been added yet.</li>
+		{% endfor %}
+	</ul>
+
+{% endblock content %}
