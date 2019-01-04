@@ -6,7 +6,9 @@
 
 	<ul style="list-style-type: none">
 		{% for name in names %}
-			<li>{{ name }}</li>
+			<li>
+				<a href="{% url 'campfires:name' name.id %}">{{ name }}</a>
+			</li>
 		{% empty %}
 			<li>No names have been added yet.</li>
 		{% endfor %}

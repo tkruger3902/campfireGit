@@ -14,4 +14,7 @@ urlpatterns = [
 
 	# Show all story names
 	path('names/', views.names, name='names'),
+
+	# Page for a single story
+	path('names/<int:name_id>/', views.name, name='name'),
 ]

@@ -15,3 +15,11 @@ def names(request):
 	names = Name.objects.order_by('date_added')
 	context = {'names': names}
 	return render(request, 'campfires/names.html', context)
+
+def name(request, name_id):
+	"""Show a single story."""
+	name = Name.objects.get(id=name_id)
+	stories = name.story_set.order_by('-date_added')
+	context = {'name': name, 'stories': stories}
+	return render(request, 'campfires/name.html', context)
+	
